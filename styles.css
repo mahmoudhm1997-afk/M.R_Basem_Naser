@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+
+    /* خلفية الأهرامات وأبو الهول */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("pyramids.jpg") center center / cover fixed no-repeat;
+
+    background-color: #050505;
+}
+
+
+/* =================================
+   الخلفية التاريخية
+================================= */
+
+.history-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =================================
+   المحتوى
+================================= */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 92%);
+    min-height: 100vh;
+
+    margin: auto;
+    padding: 65px 20px 50px;
+
+    text-align: center;
+}
+
+
+/* =================================
+   صورة البروفايل
+================================= */
+
+.profile-image {
+    width: 145px;
+    height: 145px;
+
+    margin: auto;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #d6ad60,
+        #8c6328,
+        #e6c579
+    );
+
+    box-shadow:
+        0 0 35px rgba(214, 173, 96, 0.45);
+
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =================================
+   الاسم
+================================= */
+
+.profile h1 {
+    margin-top: 25px;
+
+    font-size: clamp(28px, 5vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    color: white;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+    margin-top: 15px;
+
+    color: #dddddd;
+
+    font-size: 17px;
+}
+
+
+/* =================================
+   الحسابات
+================================= */
+
+.social-section {
+    margin-top: 55px;
+}
+
+.social-section h2 {
+    margin-bottom: 28px;
+
+    font-size: 26px;
+
+    color: white;
+}
+
+
+/* =================================
+   شبكة الأزرار
+================================= */
+
+.social-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* =================================
+   شكل الزر الأساسي
+================================= */
+
+.social-link {
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* الأيقونة */
+
+.social-link .icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.18);
+
+    font-size: 21px;
+}
+
+
+/* =================================
+   Facebook - أزرق
+================================= */
+
+.facebook {
+    background: #1877F2;
+
+    box-shadow:
+        0 8px 25px rgba(24,119,242,0.25);
+}
+
+.facebook:hover {
+    box-shadow:
+        0 12px 35px rgba(24,119,242,0.55);
+
+    transform: translateY(-6px);
+}
+
+
+/* =================================
+   WhatsApp - أخضر
+================================= */
+
+.whatsapp {
+    background: #25D366;
+
+    box-shadow:
+        0 8px 25px rgba(37,211,102,0.25);
+}
+
+.whatsapp:hover {
+    box-shadow:
+        0 12px 35px rgba(37,211,102,0.55);
+
+    transform: translateY(-6px);
+}
+
+
+/* =================================
+   Instagram - تدرج
+================================= */
+
+.instagram {
+    background:
+        linear-gradient(
+            135deg,
+            #833AB4,
+            #E1306C,
+            #F77737,
+            #FCAF45
+        );
+
+    box-shadow:
+        0 8px 25px rgba(225,48,108,0.3);
+}
+
+.instagram:hover {
+    box-shadow:
+        0 12px 35px rgba(225,48,108,0.6);
+
+    transform: translateY(-6px);
+}
+
+
+/* =================================
+   YouTube - أحمر
+================================= */
+
+.youtube {
+    background: #FF0000;
+
+    box-shadow:
+        0 8px 25px rgba(255,0,0,0.28);
+}
+
+.youtube:hover {
+    box-shadow:
+        0 12px 35px rgba(255,0,0,0.6);
+
+    transform: translateY(-6px);
+}
+
+
+/* =================================
+   TikTok - أسود
+================================= */
+
+.tiktok {
+    background: #050505;
+
+    border:
+        1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+        4px 4px 0 #00f2ea,
+        -4px -4px 0 #ff0050;
+}
+
+.tiktok:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        7px 7px 0 #00f2ea,
+        -7px -7px 0 #ff0050;
+}
+
+
+/* =================================
+   تأثير الأيقونات
+================================= */
+
+.social-link i {
+    color: white;
+}
+
+.social-link:hover {
+    filter: brightness(1.1);
+}
+
+
+/* =================================
+   كارت التاريخ
+================================= */
+
+.history-card {
+    max-width: 800px;
+
+    margin: 45px auto 0;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    border:
+        1px solid rgba(214,173,96,0.45);
+
+    backdrop-filter: blur(8px);
+
+    text-align: left;
+}
+
+.history-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: rgba(214,173,96,0.18);
+
+    color: #d6ad60;
+
+    font-size: 25px;
+}
+
+.history-card h3 {
+    margin-bottom: 5px;
+
+    color: #e3bd6d;
+}
+
+.history-card p {
+    color: #cccccc;
+}
+
+
+/* =================================
+   الموبايل
+================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding-top: 45px;
+    }
+
+    .profile-image {
+        width: 125px;
+        height: 125px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+    .social-link {
+        min-height: 68px;
+    }
+
+    .history-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}.copyright {
+    position: relative;
+    z-index: 2;
+    margin: 45px auto 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.copyright p {
+    margin: 2px 0;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.copyright-line {
+    margin-top: 8px;
+    font-size: 11px;
+    color: rgba(214, 173, 96, 0.8);
+}
+
+.copyright-line.english {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.45);
+}

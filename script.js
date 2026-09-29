@@ -1,0 +1,1 @@
+console.log("Social Studies & History page loaded successfully.");
