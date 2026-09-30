@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 
     /* خلفية الأهرامات وأبو الهول */
-    background:
+     background:
         linear-gradient(
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.35)
