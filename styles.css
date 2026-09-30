@@ -13,8 +13,8 @@ body {
     /* خلفية الأهرامات وأبو الهول */
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.78)
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.35)
         ),
         url("pyramids.jpg") center center / cover fixed no-repeat;
 
