@@ -462,6 +462,12 @@ body {
     transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .loading-content {
     color: white;
     padding: 20px;
