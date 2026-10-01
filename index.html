@@ -14,11 +14,15 @@
 </head>
 
 <script>
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            document.getElementById("loading-screen").classList.add("hidde");
-        }, 3600);
-    });
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        const loading = document.getElementById("loading-screen");
+
+        if (loading) {
+            loading.style.display = "none";
+        }
+    }, 3600);
+});
 </script>
 
 <body>
